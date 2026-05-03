@@ -1,24 +1,317 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Welcome to my personal website!</title>
-        <meta charset="UTF-8">
-        <meta name="author" content="Jake Leverett">
-    </head>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Jake Leverett</title>
+<meta name="description" content="Jake Leverett — Full Stack Software Engineer at LPL Financial. Personal site." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=VT323&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="stylesheet.css" />
+</head>
+<body>
 
-    <body>
-        <div>
-            <h1 class="intro">Hello! My name is Jake Leverett and this is my personal website</h1>
-            <img src="headpic.JPG" alt="headshot" width="200" height="auto" class="image">
+<canvas id="matrix" aria-hidden="true"></canvas>
+
+<div class="wrap">
+
+  <!-- Title bar -->
+  <div class="titlebar" role="presentation">
+    <span class="dot"></span>
+    <span class="dot amber"></span>
+    <span class="dot dim"></span>
+    <span class="path">jake@leverett: ~/portfolio</span>
+    <span class="right" id="ts">--:--:--</span>
+  </div>
+
+  <div class="window">
+    <div class="window-body">
+
+      <!-- Header / identity -->
+      <header class="head">
+        <div class="avatar" id="avatar" aria-label="Jake Leverett headshot"></div>
+        <div class="ident">
+          <h1>Jake Leverett</h1>
+          <div class="role">Full Stack Software Engineer · LPL Financial</div>
+          <div class="meta">Fort Mill, SC · B.S. Electrical and Computer Engineering, UT Austin '24</div>
+          <div class="links">
+            <a href="mailto:jake.leverett24@gmail.com">email</a>
+            <a href="https://linkedin.com/in/jake-leverett" target="_blank" rel="noopener">linkedin</a>
+            <a href="https://github.com/JakeLev01" target="_blank" rel="noopener">github</a>
+          </div>
+        </div>
+      </header>
+
+      <!-- About -->
+      <section class="about">
+        <div class="prompt"><span class="user">jake</span><span class="at">@leverett</span>:~$ <span class="cmd">cat about.txt</span></div>
+        <h2>about</h2>
+        <p>
+          I am a 24-year-old full stack software engineer at LPL Financial. I graduated from
+          The University of Texas at Austin with a degree in Electrical and Computer Engineering,
+          and I am continuing to grow my skills across the modern web and cloud stack —
+          .NET, Angular, and AWS. I am also actively building experience with AI tooling and
+          LLM-driven systems as they reshape how software gets built.
+        </p>
+        <div class="tags">
+          <span class="tag">.NET / C#</span>
+          <span class="tag">Angular / TypeScript</span>
+          <span class="tag">AWS / EKS</span>
+          <span class="tag">REST APIs</span>
+          <span class="tag">Python</span>
+          <span class="tag">SQL</span>
+          <span class="tag">AI / LLMs</span>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section>
+        <div class="prompt"><span class="user">jake</span><span class="at">@leverett</span>:~$ <span class="cmd">ls experience/</span></div>
+        <h2>experience</h2>
+
+        <div class="job">
+          <div class="head-row">
+            <div>
+              <span class="company">LPL Financial</span>
+              <span class="where"> — Fort Mill, SC</span>
+            </div>
+            <div class="when">Jul 2024 — Present</div>
+          </div>
+          <div class="title-line"><em>Engineer II, Software Developer</em> (Mar 2026 — Present) · <em>Engineer I, Software Developer</em> (Jul 2024 — Mar 2026)</div>
+          <ul>
+            <li>Built the first in-house banking solution that allows 120+ users to open Cash Management Accounts with LPL daily.</li>
+            <li>Developed seven REST .NET APIs that process and update data structuring operations across seven domains and four vendors.</li>
+            <li>Deployed containerized APIs on AWS EKS using layered authentication methods to enable access to three sets of services.</li>
+            <li>Integrated four new Angular UIs into the existing enterprise web platform for check, debit card, and bill pay enrollment.</li>
+            <li>Automated two nightly batch jobs on AWS to transmit order data for 30,000+ clients to external vendor systems.</li>
+            <li>Organized five early-career events, two university hackathons, and the new-hire bootcamp for the Tech Associate Program.</li>
+          </ul>
         </div>
 
-        <div>
-            <h3 id="title">This is a little about me and my experiences!</h3>
-            <p class="body">I am current a 3rd year Electrical and Computer Engineering student at the University of Texas at Austin. I am focusing on the Software Design Track to further my ambition of becoming a Software Engineer. Through my coursework and personal projects I have encountered and deployed intense algorithms in languages, such as C/C++, Java, Python and Assembly. I have an interest in the Software Design process and hope to implement and further my current knowledge of programming through a summer internship!</p>
-            <a href="https://www.utexas.edu/" class="link">This is a link to my university</a>
+        <div class="job">
+          <div class="head-row">
+            <div>
+              <span class="company">PrivacyCheck</span>
+              <span class="where"> — UT Center for Identity, Austin, TX</span>
+            </div>
+            <div class="when">Aug 2023 — May 2024</div>
+          </div>
+          <ul>
+            <li>Developed a Python-based tool that analyzes and scores privacy policies across 100+ companies for GDPR compliance.</li>
+            <li>Trained an LLM-driven system using GDPR and cybersecurity frameworks to assess compliance and transparency.</li>
+            <li>Benchmarked 16 legacy ML models against GDPR requirements to evaluate Gemini’s compliance accuracy.</li>
+            <li>Engineered Gemini prompts that deliver scalable, replicable GDPR compliance scoring at roughly 80% accuracy.</li>
+          </ul>
         </div>
 
-    </body>
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    <script charset="UTF-8"></script>
+        <div class="job">
+          <div class="head-row">
+            <div>
+              <span class="company">Human Signals Lab at UT Austin</span>
+              <span class="where"> — Undergraduate Research Assistant, Austin, TX</span>
+            </div>
+            <div class="when">Sep 2022 — Jul 2023</div>
+          </div>
+          <ul>
+            <li>Conducted longitudinal data collection on jugglers using accelerometer-based Apple Watch instrumentation.</li>
+            <li>Annotated activity datasets to evaluate the LAPNet-HAR model’s ability to detect varying skill levels.</li>
+            <li>Built Python scripts to analyze trained-model behavior on down-sampled juggling data.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section>
+        <div class="prompt"><span class="user">jake</span><span class="at">@leverett</span>:~$ <span class="cmd">ls projects/</span></div>
+        <h2>projects</h2>
+        <div class="grid">
+
+          <div class="card">
+            <div class="name">Spotify Controller</div>
+            <span class="when">May 2023 — Jul 2023</span>
+            <p>Spotify session app with real-time playback and user controls. Django backend with serializers handling Spotify OAuth, React frontend.</p>
+            <a href="https://github.com/JakeLev01/SpotifyController" target="_blank" rel="noopener">github.com/JakeLev01/SpotifyController</a>
+          </div>
+
+          <div class="card">
+            <div class="name">Hardware Checkout Application</div>
+            <span class="when">Feb 2023 — May 2023</span>
+            <p>Hardware-as-a-Service backend with MongoDB and PyMongo for auth and project data, plus a Flask API powering a React frontend.</p>
+            <a href="https://github.com/JakeLev01/461LGopherRats" target="_blank" rel="noopener">github.com/JakeLev01/461LGopherRats</a>
+          </div>
+
+          <div class="card">
+            <div class="name">Android Weather App</div>
+            <span class="when">May 2022</span>
+            <p>Native Android weather app written in Java/XML with threaded REST calls for live Austin weather data.</p>
+            <a href="https://github.com/JakeLev01/AndroidWeatherApp" target="_blank" rel="noopener">github.com/JakeLev01/AndroidWeatherApp</a>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Skills + Education -->
+      <section>
+        <div class="prompt"><span class="user">jake</span><span class="at">@leverett</span>:~$ <span class="cmd">cat skills.txt education.txt</span></div>
+        <h2>skills &amp; education</h2>
+
+        <div class="skills-block">
+          <div class="kv"><div class="k">languages</div><div class="v">C# / .NET, JavaScript / TypeScript, Python, SQL, Java, C / C++, R</div></div>
+          <div class="kv"><div class="k">frameworks</div><div class="v">Angular, .NET Core, Django, Flask, React</div></div>
+          <div class="kv"><div class="k">cloud / infra</div><div class="v">AWS (EKS, batch, IAM), Kubernetes, Docker, PostgreSQL</div></div>
+          <div class="kv"><div class="k">iac</div><div class="v">Terraform, infrastructure-as-code workflows</div></div>
+          <div class="kv"><div class="k">platform</div><div class="v">REST API design, OAuth / JWT, prompt engineering, LLM integration</div></div>
+          <div class="kv"><div class="k">certifications</div><div class="v">AWS Cloud Practitioner · Google Data Analytics Certificate</div></div>
+        </div>
+
+        <div class="edu-row">
+          <div class="school">The University of Texas at Austin</div>
+          <div class="when">May 2024</div>
+          <div class="degree">B.S. Electrical and Computer Engineering — Austin, TX</div>
+          <div class="gpa">GPA 3.62</div>
+        </div>
+      </section>
+
+      <!-- Involvement -->
+      <section>
+        <div class="prompt"><span class="user">jake</span><span class="at">@leverett</span>:~$ <span class="cmd">cat involvement.txt</span></div>
+        <h2>involvement</h2>
+
+        <div class="job">
+          <div class="head-row">
+            <div>
+              <span class="company">Student Engineering Council</span>
+              <span class="where"> — Service Director, UT Austin</span>
+            </div>
+            <div class="when">Apr 2023 — May 2024</div>
+          </div>
+          <ul>
+            <li>Led a campus-wide food drive that raised over $6,000 for the Central Texas Food Bank.</li>
+            <li>Organized a Casino Night fundraiser for engineering students that raised $4,000 for The Arc of the Capital Area.</li>
+            <li>Created 10 ongoing volunteering opportunities with Keep Austin Beautiful and Helping Hand Home, connecting hundreds of engineering students with hands-on community service.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Hobbies -->
+      <section>
+        <div class="prompt"><span class="user">jake</span><span class="at">@leverett</span>:~$ <span class="cmd">cat hobbies.txt</span></div>
+        <h2>hobbies</h2>
+        <div class="hobbies-grid">
+          <div class="hobby">
+            <div class="marker">&gt;</div>
+            <div class="body">
+              <span class="label">Sports</span>
+              <span class="text">Basketball is the one I actually play. Pickup games whenever I can find a decent run. The rest (hockey, football, soccer) I follow from the couch, usually way too invested for my own good.</span>
+            </div>
+          </div>
+          <div class="hobby">
+            <div class="marker">&gt;</div>
+            <div class="body">
+              <span class="label">Hiking</span>
+              <span class="text">Trails are how I unplug. No notifications, no Slack pings, just whatever the next mile looks like. I try to get out whenever life lets me.</span>
+            </div>
+          </div>
+          <div class="hobby">
+            <div class="marker">&gt;</div>
+            <div class="body">
+              <span class="label">Movies</span>
+              <span class="text">Movies are my reset button. Interstellar still gets me every time. Grand Budapest is the one I rewatch when I want the world to feel a little more thoughtful. And Cars. I refuse to apologize for Cars.</span>
+            </div>
+          </div>
+          <div class="hobby">
+            <div class="marker">&gt;</div>
+            <div class="body">
+              <span class="label">Comics &amp; Fantasy</span>
+              <span class="text">Spider-Man hooked me as a kid and never really let go. Game of Thrones pulled me into a world I keep wanting to revisit. I am a sucker for stories that stay with you for weeks after.</span>
+            </div>
+          </div>
+          <div class="hobby">
+            <div class="marker">&gt;</div>
+            <div class="body">
+              <span class="label">Homelabbing</span>
+              <span class="text">I have a small stack of gear at home that I am always poking at. Half learning lab, half genuinely useful, all of it teaching me something I would never run into at work.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div>© <span id="year"></span> Jake Leverett</div>
+        <div class="blink">connection secure</div>
+      </footer>
+
+    </div>
+  </div>
+</div>
+
+<script>
+  // Year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Live clock in titlebar
+  (function(){
+    const el = document.getElementById('ts');
+    function tick(){
+      const d = new Date();
+      const pad = (n) => String(n).padStart(2, '0');
+      el.textContent = pad(d.getHours()) + ':' + pad(d.getMinutes()) + ':' + pad(d.getSeconds());
+    }
+    tick();
+    setInterval(tick, 1000);
+  })();
+
+  // Avatar fallback if image missing
+  (function(){
+    const av = document.getElementById('avatar');
+    const img = new Image();
+    img.onload = () => { /* fine, leave background */ };
+    img.onerror = () => {
+      av.classList.add('placeholder');
+      av.style.backgroundImage = 'none';
+      av.textContent = '[ headshot ]';
+    };
+    img.src = 'images/headshot.jpg';
+  })();
+
+  // Matrix rain
+  (function(){
+    const c = document.getElementById('matrix');
+    if (!c) return;
+    const ctx = c.getContext('2d');
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿ$+-*/=<>{}[]()#@!?'.split('');
+    let cols = 0, drops = [], fontSize = 14;
+
+    function resize() {
+      c.width = window.innerWidth;
+      c.height = window.innerHeight;
+      fontSize = Math.max(12, Math.floor(window.innerWidth / 90));
+      cols = Math.floor(c.width / fontSize);
+      drops = Array(cols).fill(0).map(() => Math.random() * -50);
+    }
+    resize();
+    window.addEventListener('resize', resize);
+
+    function draw() {
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.08)';
+      ctx.fillRect(0, 0, c.width, c.height);
+      ctx.font = fontSize + "px 'JetBrains Mono', monospace";
+      for (let i = 0; i < cols; i++) {
+        const ch = chars[(Math.random() * chars.length) | 0];
+        const x = i * fontSize;
+        const y = drops[i] * fontSize;
+        // brighter head
+        ctx.fillStyle = (Math.random() < 0.04) ? '#9bffbf' : '#00ff66';
+        ctx.fillText(ch, x, y);
+        if (y > c.height && Math.random() > 0.975) drops[i] = 0;
+        drops[i] += 1;
+      }
+      requestAnimationFrame(draw);
+    }
+    draw();
+  })();
+</script>
+
+</body>
 </html>
